@@ -45,6 +45,7 @@ public class Engineering_Entrance extends AppCompatActivity {
         coursesModels.add(new CoursesModel("Study Material",R.drawable.material));
         coursesModels.add(new CoursesModel("Mock test",R.drawable.mocktest));
         coursesModels.add(new CoursesModel("performance",R.drawable.performance));
+        coursesModels.add(new CoursesModel("Need Help?",R.drawable.needhelp));
         recyclerCourse1Adapter = new RecyclerCourse1Adapter(this,coursesModels);
         binding.recuclerview.setAdapter(recyclerCourse1Adapter);
     }

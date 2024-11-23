@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "735680616178",
+    "firebase_url": "https://studymat-953a7-default-rtdb.firebaseio.com",
+    "project_id": "studymat-953a7",
+    "storage_bucket": "studymat-953a7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:735680616178:android:8cccc5c5ef1a49d055626b",
+        "android_client_info": {
+          "package_name": "com.boss.edutech"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUgIJw5W6Ha283Q7P-rSjW0w7KTlT3Pos"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

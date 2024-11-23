@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         coursesModels.add(new CoursesModel("ACCA",R.drawable.acca));
         recyclerCourseAdapter = new RecyclerCourseAdapter(this,coursesModels);
         binding.recyclerViewCourses.setAdapter(recyclerCourseAdapter);
-        
+
         noticeModels.add((new NoticeModel("Engineering entrance date is out...","6:00 PM")));
         noticeModels.add((new NoticeModel("Medical Entrance exam will be published after a week","5:00 PM")));
         noticeModels.add((new NoticeModel("Cmat Entrance is at last step and the admission process will start soon...","6:00 AM")));

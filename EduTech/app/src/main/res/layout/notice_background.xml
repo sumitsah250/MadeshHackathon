@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="10dp">
+    android:background="@drawable/edt_background"
+    android:layout_margin="5dp"
+    android:padding="6dp">
 
     <TextView
         android:id="@+id/noticename"

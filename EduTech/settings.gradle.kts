@@ -12,6 +12,9 @@ pluginManagement {
         mavenCentral()
         gradlePluginPortal()
         maven { url=uri("https://jitpack.io") }
+        maven {
+            url = uri("https://my.nutrient.io/maven")
+        }
     }
 }
 dependencyResolutionManagement {
@@ -20,6 +23,10 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         maven { url=uri("https://jitpack.io") }
+
+        maven {
+            url = uri("https://my.nutrient.io/maven")
+        }
     }
 }
 

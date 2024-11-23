@@ -27,8 +27,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     buildFeatures{
         viewBinding =true
@@ -45,6 +45,10 @@ dependencies {
     implementation("com.google.ai.client.generativeai:generativeai:0.7.0")
 
     implementation("com.google.guava:guava:32.1.2-jre")
+
+
+
+    implementation("com.pspdfkit:pspdfkit:2024.8.1")
 
 
     implementation(libs.appcompat)

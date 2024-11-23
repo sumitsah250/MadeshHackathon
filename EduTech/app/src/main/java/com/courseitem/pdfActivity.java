@@ -10,6 +10,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.boss.Adapters.RecyclerViewCourseItem;
+import com.boss.Adapters.RecyclerViewCourseItem1;
 import com.boss.edutech.R;
 import com.boss.edutech.databinding.ActivityPdfBinding;
 import com.boss.modelClass.CoursesModel;
@@ -20,7 +21,7 @@ public class pdfActivity extends AppCompatActivity {
     ActivityPdfBinding binding;
     ArrayList<CoursesModel> videoList=new ArrayList<>();
 
-    RecyclerViewCourseItem recyclerViewCourseItem;
+    RecyclerViewCourseItem1 recyclerViewCourseItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +56,7 @@ public class pdfActivity extends AppCompatActivity {
         videoList.add(new CoursesModel("# Pdf 13",R.drawable.material));
         videoList.add(new CoursesModel("# Pdf 14",R.drawable.material));
 
-        recyclerViewCourseItem=new RecyclerViewCourseItem(this,videoList);
+        recyclerViewCourseItem=new RecyclerViewCourseItem1(this,videoList);
         binding.recyclerview.setAdapter(recyclerViewCourseItem);
 
 

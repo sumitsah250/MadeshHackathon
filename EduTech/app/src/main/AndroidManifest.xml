@@ -15,6 +15,19 @@
         android:theme="@style/Theme.EduTech"
         tools:targetApi="31">
         <activity
+            android:name="com.courseitem.MockTest"
+            android:exported="false" />
+        <activity
+            android:name="com.boss.chat.Chat"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:theme="@style/Theme.EduTech"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name="com.boss.util.VideoViewer"
+            android:configChanges="orientation"
+            android:exported="false" />
+        <activity
             android:name="com.courseitem.pdfActivity"
             android:exported="false" />
         <activity
@@ -25,22 +38,19 @@
             android:exported="false" />
         <activity
             android:name="com.boss.allBboutLogin.LoginActivity"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name="com.boss.allBboutLogin.SignUpActivity"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
-            android:exported="false">
-
-        </activity>
+            android:exported="false" />
     </application>
 
 </manifest>

@@ -39,16 +39,22 @@ public class videoActivity extends AppCompatActivity {
         }
         binding.toolbar.setTitle("VIDEO");
 
-        videoList.add(new CoursesModel("# Lecture 1",R.drawable.video));
-        videoList.add(new CoursesModel("# Lecture 2",R.drawable.video));
-        videoList.add(new CoursesModel("# Lecture 3",R.drawable.video));
-        videoList.add(new CoursesModel("# Lecture 4",R.drawable.video));
-        videoList.add(new CoursesModel("# Lecture 5",R.drawable.video));
-        videoList.add(new CoursesModel("# Lecture 6",R.drawable.video));
-        videoList.add(new CoursesModel("# Lecture 7",R.drawable.video));
-        videoList.add(new CoursesModel("# Lecture 8",R.drawable.video));
-        videoList.add(new CoursesModel("# Lecture 9",R.drawable.video));
-        videoList.add(new CoursesModel("# Lecture 10",R.drawable.video));
+        videoList.add(new CoursesModel("# Lecture 1",R.drawable.play_svgrepo_com));
+        videoList.add(new CoursesModel("# Lecture 2",R.drawable.play_svgrepo_com));
+        videoList.add(new CoursesModel("# Lecture 3",R.drawable.play_svgrepo_com));
+        videoList.add(new CoursesModel("# Lecture 4",R.drawable.play_svgrepo_com));
+        videoList.add(new CoursesModel("# Lecture 5",R.drawable.play_svgrepo_com));
+        videoList.add(new CoursesModel("# Lecture 6",R.drawable.play_svgrepo_com));
+        videoList.add(new CoursesModel("# Lecture 7",R.drawable.play_svgrepo_com));
+        videoList.add(new CoursesModel("# Lecture 8",R.drawable.play_svgrepo_com));
+        videoList.add(new CoursesModel("# Lecture 9",R.drawable.play_svgrepo_com));
+        videoList.add(new CoursesModel("# Lecture 10",R.drawable.play_svgrepo_com));
+        videoList.add(new CoursesModel("# Lecture 11",R.drawable.play_svgrepo_com));
+        videoList.add(new CoursesModel("# Lecture 12",R.drawable.play_svgrepo_com));
+        videoList.add(new CoursesModel("# Lecture 13",R.drawable.play_svgrepo_com));
+        videoList.add(new CoursesModel("# Lecture 14",R.drawable.play_svgrepo_com));
+        videoList.add(new CoursesModel("# Lecture 15",R.drawable.play_svgrepo_com));
+
         recyclerViewCourseItem=new RecyclerViewCourseItem(this,videoList);
         binding.recyclerview.setAdapter(recyclerViewCourseItem);
 

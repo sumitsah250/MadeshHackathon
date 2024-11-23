@@ -49,6 +49,11 @@ public class pdfActivity extends AppCompatActivity {
         videoList.add(new CoursesModel("# Pdf 7",R.drawable.material));
         videoList.add(new CoursesModel("# Pdf 8",R.drawable.material));
         videoList.add(new CoursesModel("# Pdf 9",R.drawable.material));
+        videoList.add(new CoursesModel("# Pdf 10",R.drawable.material));
+        videoList.add(new CoursesModel("# Pdf 11",R.drawable.material));
+        videoList.add(new CoursesModel("# Pdf 12",R.drawable.material));
+        videoList.add(new CoursesModel("# Pdf 13",R.drawable.material));
+        videoList.add(new CoursesModel("# Pdf 14",R.drawable.material));
 
         recyclerViewCourseItem=new RecyclerViewCourseItem(this,videoList);
         binding.recyclerview.setAdapter(recyclerViewCourseItem);

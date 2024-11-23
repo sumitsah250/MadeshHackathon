@@ -4,24 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:id="@+id/mainitem1"
+    android:background="@drawable/recycler_backgound_videos"
+    android:layout_margin="5dp"
     android:padding="5dp"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    >
 
     <ImageView
         android:id="@+id/image"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/video" />
+        app:srcCompat="@drawable/play_svgrepo_com" />
 
     <TextView
         android:layout_marginLeft="5dp"
         android:id="@+id/name"
         android:layout_width="wrap_content"
+        android:textColor="@color/black"
         android:layout_height="wrap_content"
         android:text="# Lecture 1"
-        android:textSize="28sp"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="@+id/image"
         app:layout_constraintStart_toEndOf="@+id/image"
         app:layout_constraintTop_toTopOf="@+id/image" />

@@ -10,10 +10,12 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.boss.courses.Engineering_Entrance;
 import com.boss.edutech.R;
 import com.boss.edutech.databinding.CourseitemrowBinding;
 import com.boss.edutech.databinding.CoursesRowBinding;
 import com.boss.modelClass.CoursesModel;
+import com.boss.util.VideoViewer;
 import com.courseitem.videoActivity;
 
 import java.util.ArrayList;
@@ -39,6 +41,25 @@ public class RecyclerViewCourseItem extends RecyclerView.Adapter<RecyclerViewCou
     public void onBindViewHolder(@NonNull RecyclerViewCourseItem.ViewHolder holder, int position) {
         holder.binding.image.setImageResource(coursesModels.get(position).getImage());
         holder.binding.name.setText(coursesModels.get(position).getName());
+        holder.itemView.setOnClickListener(v -> {
+            Intent intent;
+            switch (position) {
+                case 0:
+                    intent = new Intent(context, VideoViewer.class).putExtra("videourl","https://mahilasanakisan.org.np/sms/cimage/video1.mp4");
+                    break;
+                    case 1:
+                    intent = new Intent(context, VideoViewer.class).putExtra("videourl","https://mahilasanakisan.org.np/sms/cimage/video2.mp4");
+                    break;
+                     case 2:
+                    intent = new Intent(context, VideoViewer.class).putExtra("videourl","https://mahilasanakisan.org.np/sms/cimage/video3.mp4");
+                    break;
+
+                default:
+                    intent = new Intent(context, Engineering_Entrance.class);
+                    break;
+            }
+            context.startActivity(intent);
+        });
 
 
     }

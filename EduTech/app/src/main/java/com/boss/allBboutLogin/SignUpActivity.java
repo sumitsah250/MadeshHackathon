@@ -3,6 +3,9 @@ package com.boss.allBboutLogin;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -26,6 +29,9 @@ public class SignUpActivity extends AppCompatActivity {
     ActivitySignUpBinding binding;
     private DatabaseReference mDatabase;
     private FirebaseAuth mAuth;
+    Button signupbutton;
+    TextView alreadyText;
+    EditText email1,password1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,37 +45,37 @@ public class SignUpActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        signupbutton=findViewById(R.id.signupbutton);
+        alreadyText=findViewById(R.id.loginredirect);
+        email1=findViewById(R.id.email);
+        password1=findViewById(R.id.password);
+
+
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
-        binding.signupButton.setOnClickListener(new View.OnClickListener() {
+
+        signupbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String email="";
                 String password="";
 
-                if(binding.email.getText().toString()!=""){
-                    email=binding.email.getText().toString();
+                if(email1.getText().toString()!=""){
+                    email=email1.getText().toString();
                 }else{
-                    binding.email.setError("email can't be empty");
+                    email1.setError("email can't be empty");
                 }
-                if(binding.password.getText().toString().equals(binding.confirmPassword.getText().toString())){
-                    if(binding.password.getText().toString().length()>=6){
-                        password=binding.password.getText().toString();
+                    if(password1.getText().toString().length()>=6){
+                        password=password1.getText().toString();
                     }else{
                         binding.password.setError("Password can't be less than 6 words");
                     }
-                }else{
-                    binding.password.setError("Password and confirm Password dose not  match");
-                    binding.confirmPassword.setError("Password and confirm Password dose not  match");
-                }
-
                 if( !email.equals("") && !password.equals("")){
-                    signupuser(binding.email.getText().toString(),binding.password.getText().toString());
+                    signupuser(email,password);
                 }
-
             }
         });
-        binding.loginRedirect.setOnClickListener(new View.OnClickListener() {
+        alreadyText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(SignUpActivity.this,LoginActivity.class));
@@ -84,8 +90,6 @@ public class SignUpActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     Intent home = new Intent(SignUpActivity.this, MainActivity.class);
-
-                    home.putExtra("password",password);
                     startActivity(home);
                     finish();
                 }else{

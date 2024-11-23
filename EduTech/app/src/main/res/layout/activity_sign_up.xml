@@ -30,7 +30,6 @@
 
 
     <EditText
-        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="6dp"
@@ -42,19 +41,18 @@
 
     <!-- Password Field -->
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="6dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/rounded_edittext"
         android:hint="Enter email"
-        android:inputType="textPassword"
         android:padding="12dp" />
 
     <!-- Confirm Password Field -->
     <EditText
-        android:id="@+id/confirm_password"
+        android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="6dp"
@@ -66,7 +64,7 @@
 
     <!-- Sign-Up Button -->
     <Button
-        android:id="@+id/signup_button"
+        android:id="@+id/signupbutton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="6dp"
@@ -78,7 +76,7 @@
 
     <!-- Login Redirect Button -->
     <TextView
-        android:id="@+id/login_redirect"
+        android:id="@+id/loginredirect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"

@@ -1,4 +1,4 @@
-package com.boss.courses;
+package com.courseitem;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -9,26 +9,25 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import com.boss.Adapters.RecyclerCourse1Adapter;
-import com.boss.Adapters.RecyclerCourseAdapter;
+import com.boss.Adapters.RecyclerViewCourseItem;
 import com.boss.edutech.R;
-import com.boss.edutech.databinding.ActivityEngineeringEntranceBinding;
+import com.boss.edutech.databinding.ActivityPdfBinding;
 import com.boss.modelClass.CoursesModel;
 
 import java.util.ArrayList;
 
-public class Engineering_Entrance extends AppCompatActivity {
-    ActivityEngineeringEntranceBinding binding;
-    ArrayList<CoursesModel> coursesModels=new ArrayList<>();
-    RecyclerCourse1Adapter recyclerCourse1Adapter;
+public class pdfActivity extends AppCompatActivity {
+    ActivityPdfBinding binding;
+    ArrayList<CoursesModel> videoList=new ArrayList<>();
+
+    RecyclerViewCourseItem recyclerViewCourseItem;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        binding=ActivityEngineeringEntranceBinding.inflate(getLayoutInflater());
+        binding=ActivityPdfBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -36,17 +35,28 @@ public class Engineering_Entrance extends AppCompatActivity {
         });
         setSupportActionBar(binding.toolbar);
         if(getSupportActionBar()!=null){
-            getSupportActionBar().setTitle("Engineering Entrance ");
+            getSupportActionBar().setTitle("PDF");
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
-        binding.toolbar.setTitle("Engineering Entrance");
+        binding.toolbar.setTitle("PDF");
 
-        coursesModels.add(new CoursesModel("Video",R.drawable.video));
-        coursesModels.add(new CoursesModel("Study Material",R.drawable.material));
-        coursesModels.add(new CoursesModel("Mock test",R.drawable.mocktest));
-        coursesModels.add(new CoursesModel("performance",R.drawable.performance));
-        recyclerCourse1Adapter = new RecyclerCourse1Adapter(this,coursesModels);
-        binding.recuclerview.setAdapter(recyclerCourse1Adapter);
+        videoList.add(new CoursesModel("# Pdf 1",R.drawable.material));
+        videoList.add(new CoursesModel("# Pdf 2",R.drawable.material));
+        videoList.add(new CoursesModel("# Pdf 3",R.drawable.material));
+        videoList.add(new CoursesModel("# Pdf 4",R.drawable.material));
+        videoList.add(new CoursesModel("# Pdf 5",R.drawable.material));
+        videoList.add(new CoursesModel("# Pdf 6",R.drawable.material));
+        videoList.add(new CoursesModel("# Pdf 7",R.drawable.material));
+        videoList.add(new CoursesModel("# Pdf 8",R.drawable.material));
+        videoList.add(new CoursesModel("# Pdf 9",R.drawable.material));
+
+        recyclerViewCourseItem=new RecyclerViewCourseItem(this,videoList);
+        binding.recyclerview.setAdapter(recyclerViewCourseItem);
+
+
+
+
+
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -57,5 +67,4 @@ public class Engineering_Entrance extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 }

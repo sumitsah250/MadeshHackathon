@@ -37,15 +37,45 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Courses item"
+        android:text="Courses Details"
+        android:layout_marginLeft="18dp"
         android:textSize="28sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:text="Course Item"
+        android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recuclerview"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_margin="5dp"
+
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:spanCount="2"
+        tools:listitem="@layout/courses_row" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginRight="10dp"
+        android:text="Prepare for your Engineering Entrance Exam with our comprehensive course, designed to cover all key topics, including Physics, Chemistry, and Mathematics. With expert guidance, in-depth study materials, and practice tests, this course ensures you're fully equipped to ace the exam and secure your engineering dreams!"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />

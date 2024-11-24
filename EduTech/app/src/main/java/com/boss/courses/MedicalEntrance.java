@@ -1,6 +1,7 @@
 package com.boss.courses;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -45,6 +46,17 @@ public class MedicalEntrance extends AppCompatActivity {
         coursesModels.add(new CoursesModel("Live Class",R.drawable.live_svgrepo_com));
         coursesModels.add(new CoursesModel("Need Help?",R.drawable.needhelp));
         coursesModels.add(new CoursesModel("performance",R.drawable.performance));
+        recyclerCourse1Adapter = new RecyclerCourse1Adapter(this,coursesModels);
         binding.recuclerview.setAdapter(recyclerCourse1Adapter);
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            // Handle the back button press
+            onBackPressed(); // This will go back to the previous activity
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 }

@@ -50,6 +50,10 @@ dependencies {
 
     implementation("com.pspdfkit:pspdfkit:2024.8.1")
 
+    implementation ("org.jitsi.react:jitsi-meet-sdk:+"){
+        isTransitive = true
+    }
+
 
     implementation(libs.appcompat)
     implementation(libs.material)

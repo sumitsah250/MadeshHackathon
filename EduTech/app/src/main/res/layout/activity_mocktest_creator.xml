@@ -6,13 +6,27 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:background="#F5F5F5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            subtitleTextColor="@color/black"
+            titleTextColor="@color/black" />
+    </com.google.android.material.appbar.AppBarLayout>
 
     <!-- Question Section -->
     <TextView
         android:id="@+id/tvQuestion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
+        android:textSize="28sp"
         android:padding="8dp"
         android:text="Question will appear here"
         android:gravity="center" />

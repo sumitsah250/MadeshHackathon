@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.boss.edutech.R;
+import com.boss.edutech.databinding.ActivityMocktestCreatorBinding;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.components.XAxis;
 import com.github.mikephil.charting.data.BarData;
@@ -27,6 +28,7 @@ public class MocktestCreator extends AppCompatActivity {
     private RadioGroup rgOptions;
     private Button btnNext;
     private BarChart barChart;
+    ActivityMocktestCreatorBinding binding;
 
     private final String[] questions = {
             "What is the capital of France?",
@@ -51,12 +53,26 @@ public class MocktestCreator extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mocktest_creator);
+        binding=ActivityMocktestCreatorBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         tvQuestion = findViewById(R.id.tvQuestion);
         rgOptions = findViewById(R.id.rgOptions);
         btnNext = findViewById(R.id.btnNext);
         barChart = findViewById(R.id.barChart);
+
+        ///
+
+        setSupportActionBar(binding.toolbar);
+        if(getSupportActionBar()!=null){
+            getSupportActionBar().setTitle("MockTest");
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+        binding.toolbar.setTitle("MockTest");
+        ///
+
+
+
 
         loadQuestion();
 

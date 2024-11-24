@@ -15,6 +15,7 @@ import com.boss.edutech.R;
 import com.boss.edutech.databinding.CoursesRowBinding;
 import com.boss.livesession.LiveMeeting;
 import com.boss.modelClass.CoursesModel;
+import com.courseitem.PiChartActivity;
 import com.courseitem.pdfActivity;
 import com.courseitem.videoActivity;
 
@@ -57,6 +58,9 @@ public class RecyclerCourse1Adapter extends RecyclerView.Adapter<RecyclerCourse1
                     break;
                 case 3:
                     intent = new Intent(context, LiveMeeting.class);
+                    break;
+                case 5:
+                    intent = new Intent(context, PiChartActivity.class);
                     break;
                 default:
                     intent = new Intent(context, videoActivity.class);

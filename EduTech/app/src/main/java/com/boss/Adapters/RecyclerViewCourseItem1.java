@@ -40,15 +40,17 @@ public class RecyclerViewCourseItem1 extends RecyclerView.Adapter<RecyclerViewCo
     public void onBindViewHolder(@NonNull RecyclerViewCourseItem1.ViewHolder holder, int position) {
         holder.binding.image.setImageResource(coursesModels.get(position).getImage());
         holder.binding.name.setText(coursesModels.get(position).getName());
+        holder.binding.name.setTextSize(28);
         holder.itemView.setOnClickListener(v -> {
 
             switch (position) {
                 case 0:
                     loadpdf("model");
-
                     break;
+                case 1:
+                    loadpdf("ent");
                 default:
-                    loadpdf("model");
+                    loadpdf("math");
 
                     break;
             }

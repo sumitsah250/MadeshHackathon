@@ -2,6 +2,7 @@ package com.boss.edutech;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 
 import androidx.activity.EdgeToEdge;
@@ -12,6 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.boss.Adapters.RecyclerCourseAdapter;
 import com.boss.Adapters.RecyclerNoticeAdapter;
+import com.boss.allBboutLogin.LoginActivity;
 import com.boss.allBboutLogin.SignUpActivity;
 import com.boss.courses.Engineering_Entrance;
 import com.boss.edutech.databinding.ActivityMainBinding;
@@ -19,6 +21,7 @@ import com.boss.modelClass.CoursesModel;
 import com.boss.modelClass.NoticeModel;
 import com.denzcoskun.imageslider.constants.ScaleTypes;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.google.firebase.auth.FirebaseAuth;
 
 
 import java.util.ArrayList;
@@ -31,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<NoticeModel> noticeModels=new ArrayList<>();
     RecyclerCourseAdapter recyclerCourseAdapter;
     RecyclerNoticeAdapter recyclerNoticeAdapter;
+    FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,13 +47,14 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        firebaseAuth=FirebaseAuth.getInstance();
 //        startActivity(new Intent(this, Engineering_Entrance.class));
         setSupportActionBar(binding.toolbar);
         if(getSupportActionBar()!=null){
-            getSupportActionBar().setTitle("EduTech");
+            getSupportActionBar().setTitle("StudyMate");
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
-        binding.toolbar.setTitle("EduTech");
+        binding.toolbar.setTitle("StudyMate");
 
         imglist.add(new SlideModel("https://mahilasanakisan.org.np/sms/cimage/cee.png", "Medical Examination Course ", ScaleTypes.FIT));
         imglist.add(new SlideModel("https://mahilasanakisan.org.np/sms/cimage/eng.png", "Engineering Entrance Course ", ScaleTypes.FIT));
@@ -71,8 +76,22 @@ public class MainActivity extends AppCompatActivity {
         binding.recyclerViewNotice.setAdapter(recyclerNoticeAdapter);
 
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu,menu);
+
+        return super.onCreateOptionsMenu(menu);
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId()==R.id.Logout){
+            firebaseAuth.signOut();
+            startActivity(new Intent(this, LoginActivity.class));
+            finish();
+
+        }
         if (item.getItemId() == android.R.id.home) {
             // Handle the back button press
             onBackPressed(); // This will go back to the previous activity

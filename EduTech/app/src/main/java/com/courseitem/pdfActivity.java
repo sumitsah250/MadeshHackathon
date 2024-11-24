@@ -41,9 +41,9 @@ public class pdfActivity extends AppCompatActivity {
         }
         binding.toolbar.setTitle("PDF");
 
-        videoList.add(new CoursesModel("# Pdf 1",R.drawable.material));
-        videoList.add(new CoursesModel("# Pdf 2",R.drawable.material));
-        videoList.add(new CoursesModel("# Pdf 3",R.drawable.material));
+        videoList.add(new CoursesModel("# Pdf 1Reference ",R.drawable.material));
+        videoList.add(new CoursesModel("# Past Year Question",R.drawable.material));
+        videoList.add(new CoursesModel("# Math  questions",R.drawable.material));
         videoList.add(new CoursesModel("# Pdf 4",R.drawable.material));
         videoList.add(new CoursesModel("# Pdf 5",R.drawable.material));
         videoList.add(new CoursesModel("# Pdf 6",R.drawable.material));

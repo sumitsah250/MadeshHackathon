@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.boss.courses.Engineering_Entrance;
+import com.boss.courses.MedicalEntrance;
 import com.boss.edutech.R;
 import com.boss.edutech.databinding.CoursesRowBinding;
 import com.boss.modelClass.CoursesModel;
@@ -46,6 +47,9 @@ public class RecyclerCourseAdapter extends RecyclerView.Adapter<RecyclerCourseAd
             switch (position) {
                 case 0:
                     intent = new Intent(context, Engineering_Entrance.class);
+                    break;
+                case 1:
+                    intent = new Intent(context, MedicalEntrance.class);
                     break;
                 default:
                     intent = new Intent(context, Engineering_Entrance.class);

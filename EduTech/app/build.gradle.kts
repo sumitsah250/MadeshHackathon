@@ -49,6 +49,7 @@ dependencies {
 
 
     implementation("com.pspdfkit:pspdfkit:2024.8.1")
+    implementation ("com.github.PhilJay:MPAndroidChart:v3.1.0")
 
     implementation ("org.jitsi.react:jitsi-meet-sdk:+"){
         isTransitive = true

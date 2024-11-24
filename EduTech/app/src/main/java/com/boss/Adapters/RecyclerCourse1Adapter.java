@@ -10,11 +10,11 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.boss.chat.Chat;
+import com.boss.courses.MocktestCreator;
 import com.boss.edutech.R;
 import com.boss.edutech.databinding.CoursesRowBinding;
 import com.boss.livesession.LiveMeeting;
 import com.boss.modelClass.CoursesModel;
-import com.courseitem.MockTest;
 import com.courseitem.pdfActivity;
 import com.courseitem.videoActivity;
 
@@ -53,7 +53,7 @@ public class RecyclerCourse1Adapter extends RecyclerView.Adapter<RecyclerCourse1
                     intent = new Intent(context, Chat.class);
                     break;
                 case 2:
-                    intent = new Intent(context, MockTest.class);
+                    intent = new Intent(context, MocktestCreator.class);
                     break;
                 case 3:
                     intent = new Intent(context, LiveMeeting.class);

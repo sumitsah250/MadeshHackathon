@@ -58,7 +58,9 @@ public class MainActivity extends AppCompatActivity {
 
         imglist.add(new SlideModel("https://mahilasanakisan.org.np/sms/cimage/cee.png", "Medical Examination Course ", ScaleTypes.FIT));
         imglist.add(new SlideModel("https://mahilasanakisan.org.np/sms/cimage/eng.png", "Engineering Entrance Course ", ScaleTypes.FIT));
-        imglist.add(new SlideModel("https://mahilasanakisan.org.np/sms/cimage/web.png", "Web Development Course  ", ScaleTypes.FIT));
+        imglist.add(new SlideModel("https://mahilasanakisan.org.np/sms/cimage/cmat.png", "CMAT ", ScaleTypes.FIT));
+        imglist.add(new SlideModel("https://mahilasanakisan.org.np/sms/cimage/acca.png", "ACCA ", ScaleTypes.FIT));
+
         binding.imageSlider.setImageList(imglist);
         //for adapter course and notice
         coursesModels.add(new CoursesModel("Engineering",R.drawable.engineering));
